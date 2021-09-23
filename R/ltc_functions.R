@@ -9,21 +9,37 @@ palettes <- list(
 
 #' Select ltc palette
 #' @description This function returns colour palettes
-#' @param palette_name Name of desired palette
-#' @return A vector of hex colour codes
+#' @param n Number of colors desired. Unfortunately most palettes now only
+#'   have 4 or 5 colors. But hopefully we'll add more palettes soon. All color
+#'   schemes are derived from the most excellent Tumblr blog:
+#'   If omitted, uses all colours.#' @return A vector of hex colour codes
 #' @export
 #' @examples
-#' ltc_palette("paloma")
-#' ltc_palette("dora")
+#' ltc("paloma")
+#' ltc("dora")
 
 
-ltc_palette <- function(palette_name) {
+ltc <- function(name, n, type = c("discrete", "continuous")) {
+  type <- match.arg(type)
 
-  pal <- palettes[[palette_name]]
+  pal <- palettes[[name]]
   if (is.null(pal))
-    stop("Whoops! That colour palette does not exist in feathers :(")
-  pal
+    stop("Palette not found.")
 
+  if (missing(n)) {
+    n <- length(pal)
+  }
+
+  if (type == "discrete" && n > length(pal)) {
+    stop("Number of requested colors greater than what palette can offer")
+  }
+
+  out <- switch(type,
+                continuous = grDevices::colorRampPalette(pal)(n),
+                discrete = pal[1:n]
+  )
+
+ structure(out, class = "LTCpalette", name = name)
 }
 
 
@@ -34,14 +50,14 @@ ltc_palette <- function(palette_name) {
 #' @export
 #' @import ggplot2
 #' @examples
-#' paloma <- ltc_palette("paloma")
+#' paloma <- ltc("paloma")
 #' print_pal(paloma)
 
+library(ggplot2)
 print_pal <- function(x) {
 
   n <- length(x)
-  df <- data.frame(x = c(1:n), y = rep(1, n), text=x)
-  print(df)
+  df <- data.frame(x = c(1:n), y = rep(1, n), text=x[1:n])
   ggplot(df, aes(x = x, y = y)) +
     geom_tile(fill = x,
               colour = "white",
