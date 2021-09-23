@@ -1,7 +1,7 @@
 ## Install 
 Install the package using the following commands
 
-`library(devtools)
+`library(devtools)<br/>
 install_github("loukesio/ltc_palettes")`
 
 ## R/theodosiou
