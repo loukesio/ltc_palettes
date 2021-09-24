@@ -54,7 +54,6 @@ ltc <- function(name, n, type = c("discrete", "continuous")) {
 #' palt(paloma)
 
 palt <- function(x) {
-
   n <- length(x)
   df <- data.frame(x = c(1:n), y = rep(1, n), text=x[1:n])
   ggplot(df, aes(x = x, y = y)) +
