@@ -39,7 +39,7 @@ ltc <- function(name, n, type = c("discrete", "continuous")) {
                 discrete = pal[1:n]
   )
 
- structure(out, class = "LTCpalette", name = name)
+ structure(out, class = "palette", name = name)
 }
 
 
