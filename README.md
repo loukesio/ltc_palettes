@@ -7,6 +7,13 @@ Install the package using the following commands
 
 ## Palettes
 
+Select the palette of interest: e.g., "paloma" 
+wiht the function `ltc("paloma")`
+and print it with 
+`palt(ltc("paloma"))`
+
+![Paloma](https://user-images.githubusercontent.com/13181494/134655847-56d938d2-4477-4539-a3d4-a9a53b737a3e.png)
+
 
 
 ## R/theodosiou
