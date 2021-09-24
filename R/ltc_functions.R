@@ -51,9 +51,9 @@ ltc <- function(name, n, type = c("discrete", "continuous")) {
 #' @import ggplot2
 #' @examples
 #' paloma <- ltc("paloma")
-#' print_pal(paloma)
+#' palt(paloma)
 
-print_pal <- function(x) {
+palt <- function(x) {
 
   n <- length(x)
   df <- data.frame(x = c(1:n), y = rep(1, n), text=x[1:n])
