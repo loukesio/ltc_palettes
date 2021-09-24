@@ -5,6 +5,9 @@ Install the package using the following commands
 
 `install_github("loukesio/ltc_palettes")`
 
+## Palettes
+
+
 
 ## R/theodosiou
 
