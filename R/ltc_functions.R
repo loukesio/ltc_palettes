@@ -53,7 +53,6 @@ ltc <- function(name, n, type = c("discrete", "continuous")) {
 #' paloma <- ltc("paloma")
 #' print_pal(paloma)
 
-library(ggplot2)
 print_pal <- function(x) {
 
   n <- length(x)
