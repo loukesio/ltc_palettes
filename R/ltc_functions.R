@@ -1,11 +1,16 @@
 #' List of colour palettes
 #' @export
 palettes <- list(
-  paloma = c("#83AF9B","#C8C8A9","#F9CDAD","#FC9D9A","#FE4365"),
+  paloma = c("#83AF9B","#C8C8A9","#F9CDAD","#f7bf95","#fe5c7a"),
+  trio <- c("#3d5a80","#98c1d9","#e0fbfc","#ee6c4d","#293241"),
   dora = c("#52777A","#542437","#C02942","#D95B43","#ECD078"),
-  ploen = c("#3F5671","#83A1C3","#CEB5C8","#C5A79C","#B17776"),
-  pastel1=c("#439093","#E9DD8A","#F9EBD9","#EBD6D7","#F09B93")
-)
+  ploen = c("#3F5671","#83A1C3","#CEB5C8","#FAC898","#B17776"),
+  pastel1=c("#c9e3c2","#68b7bb","#E9C46A","#F4A261","#846A8A"),
+  check1 = c("#fac3ad","#F67280","#9298BA","#0889A6"),
+  surf= c("#fceaab","#F7A992","#82A0C2","#85496F"),
+  new2 =c("#5980B1","#b96a8d","#A55062","#E05256","#E9A986"),
+  new3 =c("#ff7676","#F9D662", "#7cab7d", "#75B7D1"),
+  new4 = c("#E8B961","#E88170", "#C6BDE8", "#5DB7C4","#FD95BC"))
 
 #' Select ltc palette
 #' @description This function returns colour palettes
@@ -54,6 +59,7 @@ ltc <- function(name, n, type = c("discrete", "continuous")) {
 #' palt(paloma)
 
 palt <- function(x) {
+
   n <- length(x)
   df <- data.frame(x = c(1:n), y = rep(1, n), text=x[1:n])
   ggplot(df, aes(x = x, y = y)) +
@@ -62,5 +68,7 @@ palt <- function(x) {
               size = 3) +
     geom_text(aes(label=text), color="#333333", nudge_y = -0.53) +
     theme_void() +
-    theme(legend.position = "none")
+    theme(plot.title = element_text(hjust = 0.5, face="italic"),legend.position = "none")  +
+    labs(title = attributes(x)$name)
 }
+
