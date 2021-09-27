@@ -2,9 +2,9 @@
 #' @export
 palettes <- list(
   paloma = c("#83AF9B","#C8C8A9","#F9CDAD","#f7bf95","#fe5c7a"),
-  trio <- c("#3d5a80","#98c1d9","#e0fbfc","#ee6c4d","#293241"),
-  dora = c("#52777A","#542437","#C02942","#D95B43","#ECD078"),
-  ploen = c("#3F5671","#83A1C3","#CEB5C8","#FAC898","#B17776"),
+  trio=c("#3d5a80","#98c1d9","#e0fbfc","#ee6c4d","#293241"),
+  dora=c("#52777A","#542437","#C02942","#D95B43","#ECD078"),
+  ploen =c("#3F5671","#83A1C3","#CEB5C8","#FAC898","#B17776"),
   pastel1=c("#c9e3c2","#68b7bb","#E9C46A","#F4A261","#846A8A"),
   check1 = c("#fac3ad","#F67280","#9298BA","#0889A6"),
   surf= c("#fceaab","#F7A992","#82A0C2","#85496F"),
@@ -71,4 +71,3 @@ palt <- function(x) {
     theme(plot.title = element_text(hjust = 0.5, face="italic"),legend.position = "none")  +
     labs(title = attributes(x)$name)
 }
-
