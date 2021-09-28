@@ -1,5 +1,5 @@
 ## Install 
-Install the package using the following commands
+Install the package using the following commands  <img align="right" src="ltc.png" width=300>
 
 `library(devtools)`
 
@@ -8,9 +8,11 @@ Install the package using the following commands
 ## Palettes
 
 Select the palette of interest: e.g., "paloma" 
-wiht the function `ltc("paloma")`
+wiht the function `paloma <- ltc("paloma")`
 and print it with 
-`palt(ltc("paloma"))`
+`pltc(paloma)`
+
+paloma 
 
 ![Paloma](https://user-images.githubusercontent.com/13181494/134655847-56d938d2-4477-4539-a3d4-a9a53b737a3e.png)
 
