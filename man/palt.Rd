@@ -4,7 +4,7 @@
 \alias{palt}
 \title{Plot colour palette}
 \usage{
-palt(x)
+palt(chromata)
 }
 \arguments{
 \item{x}{A vector of colours}
