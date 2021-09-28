@@ -1,5 +1,5 @@
 ## Install 
-Install the package using the following commands  <img align="right" src="logo.png" width=300>
+Install the package using the following commands  <img align="right" src="ltc.png" width=300>
 
 `library(devtools)`
 
