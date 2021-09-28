@@ -12,10 +12,7 @@ wiht the function `paloma <- ltc("paloma")`
 and print it with 
 `pltc(paloma)`
 
-paloma 
-
 <img src="Paloma.png">
-
 
 ## R/theodosiou
 
