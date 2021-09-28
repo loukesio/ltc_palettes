@@ -14,6 +14,8 @@ and print it with
 
 <img src="Paloma.png">
 
+<img src="maya.png">
+
 ## R/theodosiou
 
 ### License
