@@ -14,8 +14,7 @@ and print it with
 
 paloma 
 
-![Paloma](https://user-images.githubusercontent.com/13181494/134655847-56d938d2-4477-4539-a3d4-a9a53b737a3e.png)
-
+<img src="paloma.png">
 
 
 ## R/theodosiou
