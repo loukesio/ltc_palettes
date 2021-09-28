@@ -14,7 +14,7 @@ and print it with
 
 paloma 
 
-<img src="paloma.png">
+<img src="Paloma.png">
 
 
 ## R/theodosiou
