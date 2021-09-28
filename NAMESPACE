@@ -3,6 +3,6 @@
 export(info)
 export(ltc)
 export(palettes)
-export(palt)
+export(pltc)
 import(dplyr)
 import(ggplot2)

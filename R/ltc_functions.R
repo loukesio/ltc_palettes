@@ -81,9 +81,9 @@ info <- data.frame(palette_name=c("paloma",
 #' @import ggplot2 dplyr
 #' @examples
 #' paloma <- ltc("paloma")
-#' palt(paloma)
+#' pltc(paloma)
 
-palt <- function(chromata) {
+pltc <- function(chromata,...) {
 
   info2 =info %>%
     filter(palette_name==attributes(chromata)$name)
