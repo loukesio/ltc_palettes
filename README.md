@@ -7,10 +7,12 @@ Install the package using the following commands  <img align="right" src="ltc.pn
 
 ## Palettes
 
-Select the palette of interest: e.g., "paloma" 
-wiht the function 
+Select the palette of interest: e.g., "paloma" wiht the function 
+
 `paloma <- ltc("paloma")`
+
 and print it with 
+
 `pltc(paloma)`
 
 <img src="Paloma.png">
