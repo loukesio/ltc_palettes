@@ -1,5 +1,5 @@
 ## Install 
-Install the package using the following commands  <img align="right" src="ltc.png" width=300>
+Install the package using the following commands  <img align="right" src="/palettes_images/ltc.png" width=300>
 
 `library(devtools)`
 
@@ -15,9 +15,9 @@ and print it with
 
 `pltc(paloma)`
 
-<img src="Paloma.png">
+#<img src="Paloma.png">
 
-<img src="maya.png">
+#<img src="maya.png">
 
 ## R/theodosiou
 
