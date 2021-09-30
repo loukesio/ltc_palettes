@@ -30,6 +30,7 @@ $paloma
  ```
 
 ## Palettes
+### paloma
 ```r
 # select the palette
 paloma <- ltc("paloma")
@@ -48,6 +49,7 @@ ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
   scale_fill_gradientn(colours = pal) +
  theme_minimal()
 ```
+<img src="ReadMEFigures/paloma_hex.png">
 
 ```r
 # stakc plot
@@ -57,17 +59,21 @@ ggplot(diamonds, aes(price, fill = cut)) +
   theme_bw() +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 ```
+<img src="ReadMEFigures/paloma_stack.png">
 
-<img align="left" src="ReadMEFigures/paloma_hex.png" width=300>  <img align="right" src="ReadMEFigures/paloma_stack.png" width=300> 
+### maya
 
-```r
+
+```
 # select the palette
 maya <- ltc("maya")
 
 #and print it with 
 pltc(maya)
+
 ```
 <img src="ReadMEFigures/maya.png">
+
 
 ## R/theodosiou
 
