@@ -93,16 +93,16 @@ pltc <- function(chromata,...) {
 
   n <- length(chromata)
   df <- data.frame(x = c(1:n), y = rep(1, n), text=chromata[1:n])
-  ggplot(df, aes(x = x, y = y)) +
-    geom_tile(fill = chromata,
+  ggplot2::ggplot(df, aes(x = x, y = y)) +
+    ggplot2::geom_tile(fill = chromata,
               colour = "white",
               size = 1) +
-    geom_text(aes(label=text), color="#333333", nudge_y = -0.53) +
-    theme_void() +
-    theme(plot.title = element_text(hjust = 0.5, face="italic"),
+    ggplot2::geom_text(aes(label=text), color="#333333", nudge_y = -0.53) +
+    ggplot2::theme_void() +
+    ggplot2::theme(plot.title = element_text(hjust = 0.5, face="italic"),
           plot.subtitle = element_text(hjust = 0.5, size=10),    # Subtitle customization
           legend.position = "none") +
-    labs(title = info2$palette_name, subtitle = info2$bio)
+    ggplot2::labs(title = info2$palette_name, subtitle = info2$bio)
 }
 
 #' Plot colour palette as sinus curve
