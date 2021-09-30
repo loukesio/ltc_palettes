@@ -64,16 +64,38 @@ ggplot(diamonds, aes(price, fill = cut)) +
 ###
 ### maya
 
-
 ```
 # select the palette
 maya <- ltc("maya")
 
 #and print it with 
 pltc(maya)
-
 ```
 <img src="ReadMEFigures/maya.png">
+
+```r
+pal=ltc("maya",100,"continuous")
+ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
+  geom_hex() +
+  coord_fixed() +
+  scale_fill_gradientn(colours = pal) +
+  theme_minimal()
+ ```
+<img src="ReadMEFigures/maya_hex.png">
+
+```r
+pal=ltc("maya",7,"continuous")
+diamondsggplot(diamonds, aes(price, fill = color)) +
+  geom_histogram(binwidth = 500, position = "fill") +
+  scale_fill_manual(values = pal) +
+  theme_bw() +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+  ```
+  
+ <img src="ReadMEFigures/maya_stack.png">
+
+
+ 
 
 
 ## R/theodosiou
