@@ -11,6 +11,7 @@ palettes <- list(
   franscoise=c("#5980B1","#b96a8d","#A55062","#E05256","#E9A986"),
   fernande=c("#ff7676","#F9D662","#7cab7d","#75B7D1"),
   sylvie=c("#E8B961","#E88170","#C6BDE8","#5DB7C4","#FD95BC"),
+  crbhits=c("#CBC106","#27993C","#1C6838","#8EBCB5","#389CA7","#4D83AB","#CB7B26","#BF565D","#9E163C"),
   expevo=c("#FC4E07","#E7B800","#00AFBB","#8B4769","#1d457f","gray"))
 
 #' Select ltc palette
@@ -60,6 +61,7 @@ info <- data.frame(palette_name=c("paloma",
                                   "franscoise",
                                   "fernande",
                                   "sylvie",
+                                  "crbhits",
                                   "expevo"),
                    bio=c("Daughter of Francoise Gillot and Pablo Picasoo",
                          c("Daughter of  Marie-Thérèse Walte and Pablo Ruiz Picasso"),
@@ -71,6 +73,7 @@ info <- data.frame(palette_name=c("paloma",
                          c("Franscoise Gilot was a significant French painter"),
                          c("Fernande was a French model and artist"),
                          c("Sylvette David is a French artist and model"),
+                         c("CRBHits is a R package"),
                          c("The colors that I use in my time series")))
 
 #' Plot colour palette
@@ -100,4 +103,22 @@ pltc <- function(chromata,...) {
           plot.subtitle = element_text(hjust = 0.5, size=10),    # Subtitle customization
           legend.position = "none") +
     labs(title = info2$palette_name, subtitle = info2$bio)
+}
+
+#' Plot colour palette as sinus curve
+#' @description Plot chosen colour palette from ltc package as sinus curve
+#' @param x A vector of colours
+#' @return A sinus curve showing colours in palette
+#' @export
+#' @import ggplot2 dplyr
+#' @examples
+#' paloma <- ltc("paloma")
+#' plts(paloma)
+
+plts <- function(chromata, ...) {
+    x <- outer(
+    seq(-pi, pi, length.out = 50),
+    seq(0, pi, length.out = length(chromata)),
+    function(x, y) sin(x - y))
+    graphics::matplot(x, type = "l", lwd = 4, lty = 1, col = chromata, ...)
 }
