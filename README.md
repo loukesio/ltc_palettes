@@ -29,7 +29,6 @@ $paloma
 [1] "#83AF9B" "#C8C8A9" "#f8da8a" "#f7bf95" "#fe8ca1"
  ```
 
-
 ## Palettes
 ```r
 # select the palette
@@ -40,10 +39,23 @@ pltc(paloma)
 ```
 <img src="ReadMEFigures/paloma.png">
 
+```
+pal=ltc("paloma",100,"continuous")
+ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
+  geom_hex() +
+  coord_fixed() +
+  scale_fill_gradientn(colours = pal) +
+ theme_minimal()
+```
+
+<img src="ReadMEFigures/paloma_hex.png">
+
+
+
 
 ```r
 # select the palette
-paloma <- ltc("maya")
+maya <- ltc("maya")
 
 #and print it with 
 pltc(maya)
