@@ -1,9 +1,17 @@
-## Install 
+## Install package
 Install the package using the following commands  <img align="right" src="ReadMEFigures/logo.png" width=300>
 
-`library(devtools)`
 
-`install_github("loukesio/ltc_palettes")`
+```r
+# the dev version:
+install.packages("devtools") 
+library(devtools)
+
+install_github("loukesio/ltc_palettes")
+library(ltc)
+```
+
+
 
 ## Palettes
 
