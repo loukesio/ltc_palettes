@@ -15,6 +15,19 @@ install_github("loukesio/ltc_palettes")
 library(ltc)
 ```
 
+## All palettes
+
+```r
+# see the available palettes
+names(palettes)
+ [1] "paloma"     "maya"       "dora"       "ploen"      "olga"       "mterese"    "gaby"      
+ [8] "franscoise" "fernande"   "sylvie"     "expevo"        
+
+# see the hex code from each palette 
+palettes
+$paloma
+[1] "#83AF9B" "#C8C8A9" "#f8da8a" "#f7bf95" "#fe8ca1"
+ ```
 
 
 ## Palettes
@@ -26,6 +39,15 @@ paloma <- ltc("paloma")
 pltc(paloma)
 ```
 <img src="ReadMEFigures/paloma.png">
+
+
+```r
+# select the palette
+paloma <- ltc("maya")
+
+#and print it with 
+pltc(maya)
+```
 <img src="ReadMEFigures/maya.png">
 
 ## R/theodosiou
