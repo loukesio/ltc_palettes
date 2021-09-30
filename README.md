@@ -23,8 +23,7 @@ names(palettes)
  [8] "franscoise" "fernande"   "sylvie"     "crbhits"    "expevo"        
 
 # see the hex code from each palette 
-palettes
-$paloma
+palettes$paloma
 [1] "#83AF9B" "#C8C8A9" "#f8da8a" "#f7bf95" "#fe8ca1"
  ```
 
@@ -101,11 +100,11 @@ plts(pal, main = "maya")
 <img src="ReadMEFigures/maya_sinus.png">
 
 ```r
-pal=ltc("maya",7,"continuous")
-plts(col2transparent(pal, 50))
+pal=ltc("mterese",500,"continuous")
+plts(col2transparent(pal, 75))
 ```
 
-<img src="ReadMEFigures/maya_sinus_transparent.png">
+<img src="ReadMEFigures/mterse_sinus_transparent.png">
 
 ## R/theodosiou
 
