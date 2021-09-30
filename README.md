@@ -18,18 +18,15 @@ library(ltc)
 
 
 ## Palettes
+```r
+# select the palette
+paloma <- ltc("paloma")
 
-Select the palette of interest: e.g., "paloma" wiht the function 
-
-`paloma <- ltc("paloma")`
-
-and print it with 
-
-`pltc(paloma)`
-
-#<img src="Paloma.png">
-
-#<img src="maya.png">
+#and print it with 
+pltc(paloma)
+```
+<img src="ReadMEFigures/paloma.png">
+<img src="ReadMEFigures/maya.png">
 
 ## R/theodosiou
 
