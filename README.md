@@ -1,23 +1,32 @@
-## Install 
-Install the package using the following commands  <img align="right" src="ReadMeFigures/logo.png" width=300>
+## Install package
+Install the package using the following commands  <img align="right" src="ReadMEFigures/logo.png" width=300>
 
-`library(devtools)`
 
-`install_github("loukesio/ltc_palettes")`
+```r
+# for now you can install the developemental version
+# first you need to install the devtools package if you do not have it
+install.packages("devtools") 
+# and load it
+library(devtools)
+
+# then you can install the dev version of the ltc
+install_github("loukesio/ltc_palettes")
+# and load it
+library(ltc)
+```
+
+
 
 ## Palettes
+```r
+# select the palette
+paloma <- ltc("paloma")
 
-Select the palette of interest: e.g., "paloma" wiht the function 
-
-`paloma <- ltc("paloma")`
-
-and print it with 
-
-`pltc(paloma)`
-
-#<img src="Paloma.png">
-
-#<img src="maya.png">
+#and print it with 
+pltc(paloma)
+```
+<img src="ReadMEFigures/paloma.png">
+<img src="ReadMEFigures/maya.png">
 
 ## R/theodosiou
 
