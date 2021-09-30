@@ -58,9 +58,7 @@ ggplot(diamonds, aes(price, fill = cut)) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 ```
 
-<img align="left" src="ReadMEFigures/paloma_hex.png">  <img align="right" src="ReadMEFigures/paloma_stack.png"> 
-
-
+<img align="left" src="ReadMEFigures/paloma_hex.png" width=300>  <img align="right" src="ReadMEFigures/paloma_stack.png" width=300> 
 
 ```r
 # select the palette
