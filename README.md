@@ -39,7 +39,8 @@ pltc(paloma)
 ```
 <img src="ReadMEFigures/paloma.png">
 
-```
+```r
+# hex plot
 pal=ltc("paloma",100,"continuous")
 ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
   geom_hex() +
@@ -48,8 +49,16 @@ ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
  theme_minimal()
 ```
 
-<img src="ReadMEFigures/paloma_hex.png">
+```r
+# stakc plot
+ggplot(diamonds, aes(price, fill = cut)) +
+  geom_histogram(binwidth = 500, position = "fill") +
+  scale_fill_manual(values = pal) +
+  theme_bw() +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+```
 
+<img align="left" src="ReadMEFigures/paloma_hex.png">  <img align="right" src="ReadMEFigures/paloma_stack.png"> 
 
 
 
