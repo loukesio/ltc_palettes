@@ -1,7 +1,6 @@
 ## Install package
 Install the package using the following commands  <img align="right" src="ReadMEFigures/logo.png" width=300>
 
-
 ```r
 # for now you can install the developemental version
 # first you need to install the devtools package if you do not have it
@@ -43,21 +42,21 @@ pltc(paloma)
 ```r
 # hex plot
 pal=ltc("paloma",100,"continuous")
-ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
-  geom_hex() +
-  coord_fixed() +
-  scale_fill_gradientn(colours = pal) +
- theme_minimal()
+ggplot2::ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
+  ggplot2::geom_hex() +
+  ggplot2::coord_fixed() +
+  ggplot2::scale_fill_gradientn(colours = pal) +
+  ggplot2::theme_minimal()
 ```
 <img src="ReadMEFigures/paloma_hex.png">
 
 ```r
 # stakc plot
-ggplot(diamonds, aes(price, fill = cut)) +
-  geom_histogram(binwidth = 500, position = "fill") +
-  scale_fill_manual(values = pal) +
-  theme_bw() +
-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+ggplot2::ggplot(diamonds, aes(price, fill = cut)) +
+  ggplot2::geom_histogram(binwidth = 500, position = "fill") +
+  ggplot2::scale_fill_manual(values = pal) +
+  ggplot2::theme_bw() +
+  ggplot2::theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 ```
 <img src="ReadMEFigures/paloma_stack.png">
 
@@ -75,35 +74,38 @@ pltc(maya)
 
 ```r
 pal=ltc("maya",100,"continuous")
-ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
-  geom_hex() +
-  coord_fixed() +
-  scale_fill_gradientn(colours = pal) +
-  theme_minimal()
- ```
+ggplot2::ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
+  ggplot2::geom_hex() +
+  ggplot2::coord_fixed() +
+  ggplot2::scale_fill_gradientn(colours = pal) +
+  ggplot2::theme_minimal()
+```
 <img src="ReadMEFigures/maya_hex.png">
 
 ```r
 pal=ltc("maya",7,"continuous")
-diamondsggplot(diamonds, aes(price, fill = color)) +
-  geom_histogram(binwidth = 500, position = "fill") +
-  scale_fill_manual(values = pal) +
-  theme_bw() +
-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
-  ```
+ggplot2::gplot(diamonds, aes(price, fill = color)) +
+  ggplot2::geom_histogram(binwidth = 500, position = "fill") +
+  ggplot2::scale_fill_manual(values = pal) +
+  ggplot2::theme_bw() +
+  ggplot2::theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+```
   
- <img src="ReadMEFigures/maya_stack.png">
-
+<img src="ReadMEFigures/maya_stack.png">
 
 ```r
 pal=ltc("maya",7,"continuous")
-plts(pal)
-  ```
+plts(pal, main = "maya")
+```
   
- <img src="ReadMEFigures/maya_sinus.png">
+<img src="ReadMEFigures/maya_sinus.png">
 
- 
+```r
+pal=ltc("maya",7,"continuous")
+plts(col2transparent(pal, 50))
+```
 
+<img src="ReadMEFigures/maya_sinus_transparent.png">
 
 ## R/theodosiou
 
