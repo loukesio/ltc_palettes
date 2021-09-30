@@ -3,11 +3,15 @@ Install the package using the following commands  <img align="right" src="ReadME
 
 
 ```r
-# the dev version:
+# for now you can install the developemental version
+# first you need to install the devtools package if you do not have it
 install.packages("devtools") 
+# and load it
 library(devtools)
 
+# then you can install the dev version of the ltc
 install_github("loukesio/ltc_palettes")
+# and load it
 library(ltc)
 ```
 
