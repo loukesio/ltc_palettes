@@ -104,7 +104,7 @@ pal=ltc("mterese",500,"continuous")
 plts(col2transparent(pal, 75))
 ```
 
-<img src="ReadMEFigures/mterse_sinus_transparent.png">
+<img src="ReadMEFigures/mterese_sinus_transparent.png">
 
 ## R/theodosiou
 
