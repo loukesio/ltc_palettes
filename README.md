@@ -21,7 +21,7 @@ library(ltc)
 # see the available palettes
 names(palettes)
  [1] "paloma"     "maya"       "dora"       "ploen"      "olga"       "mterese"    "gaby"      
- [8] "franscoise" "fernande"   "sylvie"     "expevo"        
+ [8] "franscoise" "fernande"   "sylvie"     "crbhits"    "expevo"        
 
 # see the hex code from each palette 
 palettes
@@ -94,6 +94,13 @@ diamondsggplot(diamonds, aes(price, fill = color)) +
   
  <img src="ReadMEFigures/maya_stack.png">
 
+
+```r
+pal=ltc("maya",7,"continuous")
+plts(pal)
+  ```
+  
+ <img src="ReadMEFigures/maya_sinus.png">
 
  
 
