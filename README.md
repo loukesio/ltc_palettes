@@ -1,5 +1,5 @@
 ## Install package
-Install the package using the following commands  <img align="right" src="ReadMEFigures/logo.png" width=300>
+Install the package using the following commands  <img align="right" src="ReadMEFigures/logo2.png" width=400>
 
 ```r
 # for now you can install the developemental version
