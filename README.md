@@ -3,7 +3,8 @@ Install the package using the following commands  <img align="right" src="ReadME
 
 ```r
 # for now you can install the developemental version
-# first you need to install the devtools package if you do not have it
+# first you need to install the devtools package 
+# in case you have not already installed
 install.packages("devtools") 
 # and load it
 library(devtools)
