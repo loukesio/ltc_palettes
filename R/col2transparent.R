@@ -7,7 +7,7 @@
 #' "#" followed by the red, blue, green and alpha values in hexadecimal
 #' (after rescaling to 0 ... 255).
 #' @importFrom grDevices col2rgb palette rgb
-#' @seealso \code{\link[grDevices]{palette}}
+#' @seealso [grDevices::palette()]
 #' @examples
 #' paloma <- ltc("paloma")
 #' paloma <- col2transparent(paloma,50)

@@ -12,7 +12,8 @@ palettes <- list(
   fernande=c("#ff7676","#F9D662","#7cab7d","#75B7D1"),
   sylvie=c("#E8B961","#E88170","#C6BDE8","#5DB7C4","#FD95BC"),
   crbhits=c("#CBC106","#27993C","#1C6838","#8EBCB5","#389CA7","#4D83AB","#CB7B26","#BF565D","#9E163C"),
-  expevo=c("#FC4E07","#E7B800","#00AFBB","#8B4769","#1d457f","gray"))
+  expevo=c("#FC4E07","#E7B800","#00AFBB","#8B4769","#1d457f","gray"),
+  minou=c("#00798c","#d1495b","#edae49","#66a182","#2e4057","#8d96a3"))
 
 #' Select ltc palette
 #' @description This function returns colour palettes
@@ -62,7 +63,8 @@ info <- data.frame(palette_name=c("paloma",
                                   "fernande",
                                   "sylvie",
                                   "crbhits",
-                                  "expevo"),
+                                  "expevo",
+                                  "minou"),
                    bio=c("Daughter of Francoise Gillot and Pablo Picasoo",
                          c("Daughter of  Marie-Thérèse Walte and Pablo Ruiz Picasso"),
                          c("French photographer, painter, and poet"),
@@ -74,7 +76,8 @@ info <- data.frame(palette_name=c("paloma",
                          c("Fernande was a French model and artist"),
                          c("Sylvette David is a French artist and model"),
                          c("CRBHits is a R package"),
-                         c("The colors that I use in my time series")))
+                         c("The colors that I use in my time series"),
+                         c("Minou was Picasso's favorite cat")))
 
 #' Plot colour palette
 #' @description Plot chosen colour palette from ltc package
@@ -121,4 +124,43 @@ plts <- function(chromata, ...) {
     seq(0, pi, length.out = length(chromata)),
     function(x, y) sin(x - y))
     graphics::matplot(x, type = "l", lwd = 4, lty = 1, col = chromata, ...)
+}
+
+#' Plot colour palette as a bird
+#' @description The color for the bird were chosen from the ltc color palette
+#' @param chrom A vector of colours
+#' @return A bird plot
+#' @export
+#' @import ggplot2 dplyr ggforce
+#' @examples
+#' paloma <- ltc("paloma")
+#' bird(paloma)
+
+bird <- function(chrom){
+  data=data.frame(x1=0,x2=5,y1=-5,y2=5, x3=4.5,x4=5.5,y3=0,y4=12)
+
+shape1 <- data.frame(
+    x = c(2, 3, 3, 2),
+    y = c(0, 2, 8, 10)
+  )
+shape2 <- data.frame(
+    x2=c(2,2.5,2.5,2),
+    y2=c(1,3,-2,-4)
+  )
+shape3 <- data.frame(
+    x3=c(3,3.22,3),
+    y3=c(8,8,7.33)
+  )
+shape4 <- data.frame(
+    x4=c(1.99,2.5, 3.01,3.01,2,2),
+    y4=c(5,   6.5,  5,   2, -0.01,1)
+  )
+
+  ggplot2::ggplot() +
+    geom_rect(data=data, mapping=aes(xmin=x1, xmax=x2, ymin=y1, ymax=y4), fill=chrom[1],color="NA") +
+    geom_shape(data=shape1, aes(x = x, y = y), fill=chrom[2]) +
+    geom_shape(data=shape3, aes(x=x3,y=y3), fill=chrom[3]) +
+    geom_shape(data=shape4, aes(x=x4,y=y4), fill=chrom[4]) +
+    geom_shape(data=shape2, aes(x=x2,y=y2), fill=chrom[5]) +
+    theme_void()
 }

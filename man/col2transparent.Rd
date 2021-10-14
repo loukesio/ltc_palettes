@@ -7,9 +7,9 @@
 col2transparent(col, alpha.perc = 0)
 }
 \arguments{
-\item{col}{R color name or R color pal [mandatory]}
+\item{col}{R color name or R color pal \link{mandatory}}
 
-\item{alpha.perc}{an alpha-transparency level in percent [default: 0]}
+\item{alpha.perc}{an alpha-transparency level in percent \link{default: 0}}
 }
 \value{
 A character vector with elements of 9 characters,
@@ -25,7 +25,7 @@ paloma <- col2transparent(paloma,50)
 plts(paloma)
 }
 \seealso{
-\code{\link[grDevices]{palette}}
+\code{\link[grDevices:palette]{grDevices::palette()}}
 }
 \author{
 Kristian K Ullrich
