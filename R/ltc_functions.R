@@ -92,8 +92,8 @@ pltc <- function(chromata,...) {
     filter(palette_name==attributes(chromata)$name)
 
   n <- length(chromata)
-  df <- data.frame(x = c(1:n), y = rep(1, n), text=chromata[1:n])
-  ggplot2::ggplot(df, aes(x = x, y = y)) +
+  df <- data.frame(xvals = c(1:n), yvals = rep(1, n), text=chromata[1:n])
+  ggplot2::ggplot(df, aes(x = xvals, y = yvals)) +
     ggplot2::geom_tile(fill = chromata,
               colour = "white",
               size = 1) +
