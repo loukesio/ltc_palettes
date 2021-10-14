@@ -91,7 +91,7 @@ info <- data.frame(palette_name=c("paloma",
 
 pltc <- function(chromata,...) {
 
-  info2 =info %>%
+  info2 = info %>%
     filter(palette_name==attributes(chromata)$name)
 
   n <- length(chromata)
@@ -157,10 +157,10 @@ shape4 <- data.frame(
   )
 
   ggplot2::ggplot() +
-    geom_rect(data=data, mapping=aes(xmin=x1, xmax=x2, ymin=y1, ymax=y4), fill=chrom[1],color="NA") +
-    geom_shape(data=shape1, aes(x = x, y = y), fill=chrom[2]) +
-    geom_shape(data=shape3, aes(x=x3,y=y3), fill=chrom[3]) +
-    geom_shape(data=shape4, aes(x=x4,y=y4), fill=chrom[4]) +
-    geom_shape(data=shape2, aes(x=x2,y=y2), fill=chrom[5]) +
+    ggplot2::geom_rect(data=data, mapping=aes(xmin=x1, xmax=x2, ymin=y1, ymax=y4), fill=chrom[1],color="NA") +
+    ggforce::geom_shape(data=shape1, aes(x = x, y = y), fill=chrom[2]) +
+    ggforce::geom_shape(data=shape3, aes(x=x3,y=y3), fill=chrom[3]) +
+    ggforce::geom_shape(data=shape4, aes(x=x4,y=y4), fill=chrom[4]) +
+    ggforce::geom_shape(data=shape2, aes(x=x2,y=y2), fill=chrom[5]) +
     theme_void()
 }
