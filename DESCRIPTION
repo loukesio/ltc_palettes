@@ -13,3 +13,6 @@ RoxygenNote: 7.1.2
 Imports: 
     dplyr,
     ggplot2
+Suggests: 
+    spelling
+Language: en-US
