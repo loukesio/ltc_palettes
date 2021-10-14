@@ -21,9 +21,9 @@ library(ltc)
 
 ```r
 # see the available palettes
-names(palettes)
- [1] "paloma"     "maya"       "dora"       "ploen"      "olga"       "mterese"    "gaby"      
- [8] "franscoise" "fernande"   "sylvie"     "crbhits"    "expevo"        
+ names(palettes)
+ [1] "paloma"     "maya"       "dora"       "ploen"      "olga"       "mterese"    "gaby"       "franscoise"
+ [9] "fernande"   "sylvie"     "crbhits"    "expevo"     "minou"         
 
 # see the hex code from each palette 
 palettes$paloma
