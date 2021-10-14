@@ -143,6 +143,14 @@ theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 ```
 <img src="ReadMEFigures/dora_stack.png">
 
+```r
+# plot the logo
+dora <- ltc("dora")
+bird(dora)
+```
+<img src="ReadMEFigures/dora_bird.png" width=400 height=425>
+
+
 ### ploen
 ```
 # select the palette
