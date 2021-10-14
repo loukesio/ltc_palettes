@@ -166,5 +166,7 @@ info2 = info %>%
     ggforce::geom_shape(data=shape4, aes(x=x4,y=y4), fill=chrom[4]) +
     ggforce::geom_shape(data=shape2, aes(x=x2,y=y2), fill=chrom[5]) +
     theme_void() +
-    ggplot2::labs(title = info2$palette_name, subtitle = info2$bio)
+    ggplot2::labs(title = info2$palette_name, subtitle = info2$bio) +
+    ggplot2::theme(plot.title = element_text(hjust = 0.5, face="italic"),
+                   plot.subtitle = element_text(hjust = 0.5, size=10))
 }
