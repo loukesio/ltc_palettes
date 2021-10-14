@@ -21,9 +21,9 @@ library(ltc)
 
 ```r
 # see the available palettes
-names(palettes)
- [1] "paloma"     "maya"       "dora"       "ploen"      "olga"       "mterese"    "gaby"      
- [8] "franscoise" "fernande"   "sylvie"     "crbhits"    "expevo"        
+ names(palettes)
+ [1] "paloma"     "maya"       "dora"       "ploen"      "olga"       "mterese"    "gaby"       "franscoise"
+ [9] "fernande"   "sylvie"     "crbhits"    "expevo"     "minou"         
 
 # see the hex code from each palette 
 palettes$paloma
@@ -142,6 +142,14 @@ theme_bw() +
 theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 ```
 <img src="ReadMEFigures/dora_stack.png">
+
+```r
+# plot the logo
+dora <- ltc("dora")
+bird(dora)
+```
+<img src="ReadMEFigures/dora_bird.png" width=400 height=425>
+
 
 ### ploen
 ```
