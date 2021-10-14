@@ -109,6 +109,17 @@ plts(col2transparent(pal, 75))
 
 <img src="ReadMEFigures/mterese_sinus_transparent.png">
 
+### dora
+
+```
+# select the palette
+dora <- ltc("dora")
+
+#and print it with 
+pltc(dora)
+```
+<img src="ReadMEFigures/dora.png">
+
 ## R/theodosiou
 
 ### License
