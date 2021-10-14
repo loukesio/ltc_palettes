@@ -120,6 +120,33 @@ pltc(dora)
 ```
 <img src="ReadMEFigures/dora.png">
 
+```r
+library(ggplot2)
+pal=ltc("dora",100,"continuous")
+ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
+  geom_hex() +
+  coord_fixed() +
+  scale_fill_gradientn(colours = pal) +
+  theme_minimal()
+ ```
+
+<img src="ReadMEFigures/dora_hex.png">
+
+
+```r
+pal=ltc("dora",7,"continuous")
+ggplot(diamonds, aes(price, fill = color)) +
+geom_histogram(binwidth = 500, position = "fill") +
+scale_fill_manual(values = pal) +
+theme_bw() +
+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+```
+<img src="ReadMEFigures/dora_stack.png">
+
+
+
+
+
 ## R/theodosiou
 
 ### License
