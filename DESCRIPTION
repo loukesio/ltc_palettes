@@ -12,7 +12,9 @@ LazyData: true
 RoxygenNote: 7.1.2
 Imports: 
     dplyr,
-    ggplot2
+    ggplot2,
+    graphics
 Suggests: 
     spelling
 Language: en-US
+Roxygen: list(markdown = TRUE)
