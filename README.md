@@ -28,7 +28,20 @@ library(ltc)
 # see the hex code from each palette 
 palettes$paloma
 [1] "#83AF9B" "#C8C8A9" "#f8da8a" "#f7bf95" "#fe8ca1"
- ```
+```
+ **pastel palettes:** _paloma, olga, mterese_
+ <img src="ReadMEFigures/paloma.png">
+ #
+
+ **diverging palettes:** _paloma, maya, dora, ploen, olga, mterese, gaby_ 
+<img src="ReadMEFigures/dora.png">
+ #
+
+ **Sequential: Multi-hue palettes:** _franscoise, crbhits_
+<img src="ReadMEFigures/crbhits.png">
+ #
+ **Categorical palettes:** _fernande, sylvie, expevo, minou_ 
+<img src="ReadMEFigures/minou.png">
 
 ## Palettes
 ### paloma
