@@ -43,7 +43,7 @@ palettes$paloma
  **Categorical palettes:** _fernande, sylvie, expevo, minou_ 
 <img src="ReadMEFigures/minou.png">
 
-## Palettes
+## Examples
 ### paloma
 ```r
 # select the palette
