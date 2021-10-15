@@ -38,7 +38,7 @@ palettes$paloma
  #
 
  **Sequential: Multi-hue palettes:** _franscoise, crbhits_
-<img src="ReadMEFigures/crbhits.png">
+<img src="ReadMEFigures/franscoise.png">
  #
  **Categorical palettes:** _fernande, sylvie, expevo, minou_ 
 <img src="ReadMEFigures/minou.png">
@@ -199,4 +199,4 @@ theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 
 
 ## Contributions
-Loukas Theodosiou (theoodosiou@evolbio.mpg.de) and Kristian Ulrich have contributed to the development of this package. We have drawn inspiration from the following packages 1. https://github.com/jakelawlor/PNWColors and 2. https://github.com/karthik/wesanderson. A huge thank you to the developers of these beautiful packages.
+Loukas Theodosiou (theoodosiou@evolbio.mpg.de) and Kristian Ullrich (ullrich@evolbio.mpg.de) have contributed to the development of this package. We have drawn inspiration from the following packages 1. https://github.com/jakelawlor/PNWColors and 2. https://github.com/karthik/wesanderson. A huge thank you to the developers of these beautiful packages.
