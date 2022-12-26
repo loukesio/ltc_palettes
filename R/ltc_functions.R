@@ -13,7 +13,13 @@ palettes <- list(
   sylvie=c("#E8B961","#E88170","#C6BDE8","#5DB7C4","#FD95BC"),
   crbhits=c("#CBC106","#27993C","#1C6838","#8EBCB5","#389CA7","#4D83AB","#CB7B26","#BF565D","#9E163C"),
   expevo=c("#FC4E07","#E7B800","#00AFBB","#8B4769","#1d457f","gray"),
-  minou=c("#00798c","#d1495b","#edae49","#66a182","#2e4057","#8d96a3"))
+  minou=c("#00798c","#d1495b","#edae49","#66a182","#2e4057","#8d96a3"),
+  avignon=c("#DC4434","#F7AA00","#F17600", "#00A9A6", "#006B99", "#5DB134", "#00874E", "#624595"),
+  OkabeIto=c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#999999"),
+  kiss=c("#FF7C7E","#FEC300","#9E3F71","#31BCBA","#E20035"),
+  hat=c('#efb306','#eb990c','#e8351e','#cd023d','#852f88','#4e54ac','#0f8096','#7db954','#17a769','#000000'),
+  reading=c("#EFBC68","#919F89","#EDBDAE","#57717C","#5F97A4","#CAEAC8","#95A1AE","#C8CFD6"))
+
 
 #' Select ltc palette
 #' @description This function returns colour palettes
@@ -25,7 +31,6 @@ palettes <- list(
 #' @examples
 #' ltc("paloma")
 #' ltc("dora")
-
 
 ltc <- function(name, n, type = c("discrete", "continuous")) {
   type <- match.arg(type)
@@ -64,7 +69,12 @@ info <- data.frame(palette_name=c("paloma",
                                   "sylvie",
                                   "crbhits",
                                   "expevo",
-                                  "minou"),
+                                  "minou",
+                                  "avignon",
+                                  "OkabeIto",
+                                  "kiss",
+                                  "hat",
+                                  "reading"),
                    bio=c("Daughter of Francoise Gillot and Pablo Picasoo",
                          c("Daughter of  Marie-Thérèse Walte and Pablo Ruiz Picasso"),
                          c("French photographer, painter, and poet"),
@@ -77,7 +87,14 @@ info <- data.frame(palette_name=c("paloma",
                          c("Sylvette David is a French artist and model"),
                          c("CRBHits is a R package"),
                          c("The colors that I use in my time series"),
-                         c("Minou was Picasso's favorite cat")))
+                         c("Minou was Picasso's favorite cat"),
+                         c("Inspired from the painting `Les Demoiselles d'Avignon`"),
+                         c("All credits go to Claus Wilke"),
+                         c("Inspired by `The Kiss` Picasso 1925"),
+                         c("Inspired by `Woman in hat` Picasso 1937"),
+                         c("Inspired by `Two Girls Reading` Picasso 1934")
+                   ))
+
 
 #' Plot colour palette
 #' @description Plot chosen colour palette from ltc package
@@ -170,3 +187,5 @@ info2 = info %>%
     ggplot2::theme(plot.title = element_text(hjust = 0.5, face="italic"),
                    plot.subtitle = element_text(hjust = 0.5, size=10))
 }
+
+

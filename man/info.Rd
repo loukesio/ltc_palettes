@@ -5,7 +5,7 @@
 \alias{info}
 \title{Add information about the bio}
 \format{
-An object of class \code{data.frame} with 13 rows and 2 columns.
+An object of class \code{data.frame} with 18 rows and 2 columns.
 }
 \usage{
 info
