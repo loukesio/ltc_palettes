@@ -37,7 +37,7 @@ ltc <- function(name, n, type = c("discrete", "continuous")) {
 
   pal <- palettes[[name]]
   if (is.null(pal))
-    stop("Palette not found.")
+    stop("We do not have a palette with this name.")
 
   if (missing(n)) {
     n <- length(pal)
@@ -96,7 +96,7 @@ info <- data.frame(palette_name=c("paloma",
                    ))
 
 
-#' Plot colour palette
+#' Plot color palette
 #' @description Plot chosen colour palette from ltc package
 #' @param x A vector of colours
 #' @return An image showing colours in palette
@@ -127,7 +127,7 @@ pltc <- function(chromata,...) {
 
 #' Plot colour palette as sinus curve
 #' @description Plot chosen colour palette from ltc package as sinus curve
-#' @param x A vector of colours
+#' @param chromata A vector of colours
 #' @return A sinus curve showing colours in palette
 #' @export
 #' @import ggplot2 dplyr
@@ -182,7 +182,7 @@ info2 = info %>%
     ggforce::geom_shape(data=shape3, aes(x=x3,y=y3), fill=chrom[3]) +
     ggforce::geom_shape(data=shape4, aes(x=x4,y=y4), fill=chrom[4]) +
     ggforce::geom_shape(data=shape2, aes(x=x2,y=y2), fill=chrom[5]) +
-    theme_void() +
+    ggplot2::theme_void() +
     ggplot2::labs(title = info2$palette_name, subtitle = info2$bio) +
     ggplot2::theme(plot.title = element_text(hjust = 0.5, face="italic"),
                    plot.subtitle = element_text(hjust = 0.5, size=10))

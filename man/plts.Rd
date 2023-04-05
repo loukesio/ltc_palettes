@@ -7,7 +7,7 @@
 plts(chromata, ...)
 }
 \arguments{
-\item{x}{A vector of colours}
+\item{chromata}{A vector of colours}
 }
 \value{
 A sinus curve showing colours in palette
