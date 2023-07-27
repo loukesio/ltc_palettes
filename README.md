@@ -6,14 +6,14 @@
 Install the package using the following commands  <img align="right" src="ReadMEFigures/ltc_logo.png" width=400>
 
 ```r
-# for now you can install the developemental version of ltc
+# for now, you can install the developmental version of ltc
 # first you need to install the devtools package 
 # in case you have not already installed
 install.packages("devtools") 
 # and load it
 library(devtools)
 
-# then you can install the dev version of the ltc
+# Then you can install the dev version of the ltc
 install_github("loukesio/ltc_palettes")
 # and load it
 library(ltc)
