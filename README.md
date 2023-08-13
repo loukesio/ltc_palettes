@@ -198,7 +198,5 @@ theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 ```
 <img src="ReadMEFigures/ploen_stack.png">
 
-
-
 ## Contributions
 Loukas Theodosiou (theoodosiou@evolbio.mpg.de) and Kristian Ullrich (ullrich@evolbio.mpg.de) have contributed to the development of this package. We have drawn inspiration from the following packages 1. https://github.com/jakelawlor/PNWColors and 2. https://github.com/karthik/wesanderson. A huge thank you to the developers of these beautiful packages.
