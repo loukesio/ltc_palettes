@@ -2,20 +2,24 @@
 % Please edit documentation in R/ltc_functions.R
 \name{pltc}
 \alias{pltc}
-\title{Plot colour palette}
+\title{Plot a Colour Palette}
 \usage{
 pltc(chromata, ...)
 }
 \arguments{
-\item{x}{A vector of colours}
+\item{chromata}{A vector of colours from one of the \code{ltc} palettes.}
+
+\item{...}{Additional arguments passed on to ggplot functions.}
 }
 \value{
-An image showing colours in palette
+A ggplot2 object showing the selected colours.
 }
 \description{
-Plot chosen colour palette from ltc package
+Visualizes a selected colour palette as a bar of colours.
 }
 \examples{
+\dontrun{
 paloma <- ltc("paloma")
 pltc(paloma)
+}
 }

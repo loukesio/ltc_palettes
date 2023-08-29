@@ -3,7 +3,7 @@
 \docType{data}
 \name{info}
 \alias{info}
-\title{Add information about the bio}
+\title{Information about the Colour Palettes}
 \format{
 An object of class \code{data.frame} with 18 rows and 2 columns.
 }
@@ -11,6 +11,6 @@ An object of class \code{data.frame} with 18 rows and 2 columns.
 info
 }
 \description{
-Add information about the bio
+This dataframe contains the backstory or inspiration behind each color palette.
 }
 \keyword{datasets}

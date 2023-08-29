@@ -2,20 +2,22 @@
 % Please edit documentation in R/ltc_functions.R
 \name{bird}
 \alias{bird}
-\title{Plot colour palette as a bird}
+\title{Plot a Colour Palette as a Bird}
 \usage{
 bird(chrom)
 }
 \arguments{
-\item{chrom}{A vector of colours}
+\item{chrom}{A vector of colours from one of the \code{ltc} palettes.}
 }
 \value{
-A bird plot
+A ggplot2 object showing a bird drawing using the selected colours.
 }
 \description{
-The color for the bird were chosen from the ltc color palette
+Visualizes a selected colour palette in the form of a bird drawing.
 }
 \examples{
+\dontrun{
 paloma <- ltc("paloma")
 bird(paloma)
+}
 }

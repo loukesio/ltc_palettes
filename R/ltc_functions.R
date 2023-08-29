@@ -1,36 +1,50 @@
-#' List of colour palettes
+#' ltc: A Collection of Art-inspired Colour Palettes
+#'
+#' This package provides a collection of color palettes inspired by
+#' art, nature, and personal preferences. Each palette has a backstory,
+#' providing context and meaning to the colors.
+#'
+#' @name ltc
+
+#' @title List of colour palettes
+#' @description A list containing predefined colour palettes with artistic backstories.
 #' @export
 palettes <- list(
-  paloma = c("#83AF9B","#C8C8A9","#f8da8a","#f7bf95","#fe8ca1"),
-  maya=c("#3d5a80","#98c1d9","#e0fbfc","#ee6c4d","#293241"),
-  dora = c("#52777A","#542437","#C02942","#D95B43","#ECD078"),
-  ploen = c("#3F5671","#83A1C3","#CEB5C8","#FAC898","#B17776"),
-  olga=c("#c9e3c2","#8bc8cb","#eccd80","#f5ab70","#9c87a1"),
-  mterese=c("#f7ddaa","#fac3ad","#f897a1","#9298BA","#9cbeed"),
-  gaby=c("#fceaab","#f1a890","#a8c4cc","#82A0C2","#85496F"),
-  franscoise=c("#5980B1","#b96a8d","#A55062","#E05256","#E9A986"),
-  fernande=c("#ff7676","#F9D662","#7cab7d","#75B7D1"),
-  sylvie=c("#E8B961","#E88170","#C6BDE8","#5DB7C4","#FD95BC"),
-  crbhits=c("#CBC106","#27993C","#1C6838","#8EBCB5","#389CA7","#4D83AB","#CB7B26","#BF565D","#9E163C"),
-  expevo=c("#FC4E07","#E7B800","#00AFBB","#8B4769","#1d457f","gray"),
-  minou=c("#00798c","#d1495b","#edae49","#66a182","#2e4057","#8d96a3"),
-  avignon=c("#DC4434","#F7AA00","#F17600", "#00A9A6", "#006B99", "#5DB134", "#00874E", "#624595"),
-  OkabeIto=c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#999999"),
-  kiss=c("#FF7C7E","#FEC300","#9E3F71","#31BCBA","#E20035"),
-  hat=c('#efb306','#eb990c','#e8351e','#cd023d','#852f88','#4e54ac','#0f8096','#7db954','#17a769','#000000'),
-  reading=c("#EFBC68","#919F89","#EDBDAE","#57717C","#5F97A4","#CAEAC8","#95A1AE","#C8CFD6"))
+    paloma = c("#83AF9B","#C8C8A9","#f8da8a","#f7bf95","#fe8ca1"),
+    maya=c("#3d5a80","#98c1d9","#e0fbfc","#ee6c4d","#293241"),
+    dora = c("#52777A","#542437","#C02942","#D95B43","#ECD078"),
+    ploen = c("#3F5671","#83A1C3","#CEB5C8","#FAC898","#B17776"),
+    olga=c("#c9e3c2","#8bc8cb","#eccd80","#f5ab70","#9c87a1"),
+    mterese=c("#f7ddaa","#fac3ad","#f897a1","#9298BA","#9cbeed"),
+    gaby=c("#fceaab","#f1a890","#a8c4cc","#82A0C2","#85496F"),
+    franscoise=c("#5980B1","#b96a8d","#A55062","#E05256","#E9A986"),
+    fernande=c("#ff7676","#F9D662","#7cab7d","#75B7D1"),
+    sylvie=c("#E8B961","#E88170","#C6BDE8","#5DB7C4","#FD95BC"),
+    crbhits=c("#CBC106","#27993C","#1C6838","#8EBCB5","#389CA7","#4D83AB","#CB7B26","#BF565D","#9E163C"),
+    expevo=c("#FC4E07","#E7B800","#00AFBB","#8B4769","#1d457f","gray"),
+    minou=c("#00798c","#d1495b","#edae49","#66a182","#2e4057","#8d96a3"),
+    avignon=c("#DC4434","#F7AA00","#F17600", "#00A9A6", "#006B99", "#5DB134", "#00874E", "#624595"),
+    OkabeIto=c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#999999"),
+    kiss=c("#FF7C7E","#FEC300","#9E3F71","#31BCBA","#E20035"),
+    hat=c('#efb306','#eb990c','#e8351e','#cd023d','#852f88','#4e54ac','#0f8096','#7db954','#17a769','#000000'),
+    reading=c("#EFBC68","#919F89","#EDBDAE","#57717C","#5F97A4","#CAEAC8","#95A1AE","#C8CFD6")
+)
 
-
-#' Select ltc palette
-#' @description This function returns colour palettes
-#' @param n Number of colors desired. Unfortunately most palettes now only
-#'   have 4 or 5 colors. But hopefully we'll add more palettes soon. All color
-#'   schemes are derived from the most excellent Tumblr blog:
-#'   If omitted, uses all colours.#' @return A vector of hex colour codes
-#' @export
+#' @title Select a Colour Palette from ltc
+#' @description This function provides the desired colour palette by name.
+#'
+#' @param name Character. The name of the desired palette.
+#' @param n Integer. The number of colors you want from the palette.
+#' If omitted, it uses all colors from the palette.
+#' @param type The type of palette. Either "discrete" or "continuous".
+#' @return A vector of hex color codes
 #' @examples
+#' \dontrun{
 #' ltc("paloma")
-#' ltc("dora")
+#' ltc("dora", n = 3)
+#'}
+#' @export
+
 
 ltc <- function(name, n, type = c("discrete", "continuous")) {
   type <- match.arg(type)
@@ -55,7 +69,8 @@ ltc <- function(name, n, type = c("discrete", "continuous")) {
  structure(out, class = "palette", name = name)
 }
 
-#' Add information about the bio
+#' @title Information about the Colour Palettes
+#' @description This dataframe contains the backstory or inspiration behind each color palette.
 #' @export
 info <- data.frame(palette_name=c("paloma",
                                   "maya",
@@ -76,64 +91,70 @@ info <- data.frame(palette_name=c("paloma",
                                   "hat",
                                   "reading"),
                    bio=c("Daughter of Francoise Gillot and Pablo Picasoo",
-                         c("Daughter of  Marie-Thérèse Walte and Pablo Ruiz Picasso"),
+                         c("Daughter of  Marie-Therese Walte and Pablo Ruiz Picasso"),
                          c("French photographer, painter, and poet"),
                          c("A beautiful village in Northern Germany"),
-                         c("Olga Khokhlova was a Russian balette dancer"),
-                         c("Marie-Thérèse Walter was a French model and mother of Maya"),
+                         c("Olga Khokhlova was a Russian ballet dancer"),
+                         c("Marie-Therese Walter was a French model and mother of Maya"),
                          c("Gabrielle Depeyre Lespinasse was a french dancer"),
-                         c("Franscoise Gilot was a significant French painter"),
+                         c("Francoise Gilot was a significant French painter"),
                          c("Fernande was a French model and artist"),
                          c("Sylvette David is a French artist and model"),
                          c("CRBHits is a R package"),
                          c("The colors that I use in my time series"),
                          c("Minou was Picasso's favorite cat"),
-                         c("Inspired from the painting `Les Demoiselles d'Avignon`"),
+                         c("Inspired from the painting Les Demoiselles d'Avignon"),
                          c("All credits go to Claus Wilke"),
-                         c("Inspired by `The Kiss` Picasso 1925"),
-                         c("Inspired by `Woman in hat` Picasso 1937"),
-                         c("Inspired by `Two Girls Reading` Picasso 1934")
+                         c("Inspired by The Kiss Picasso 1925"),
+                         c("Inspired by Woman in hat Picasso 1937"),
+                         c("Inspired by Two Girls Reading Picasso 1934")
                    ))
 
-
-#' Plot color palette
-#' @description Plot chosen colour palette from ltc package
-#' @param x A vector of colours
-#' @return An image showing colours in palette
-#' @export
-#' @import ggplot2 dplyr
+#' @title Plot a Colour Palette
+#' @description Visualizes a selected colour palette as a bar of colours.
+#' @param ... Additional arguments passed on to ggplot functions.
+#' @param chromata A vector of colours from one of the `ltc` palettes.
+#' @return A ggplot2 object showing the selected colours.
 #' @examples
+#' \dontrun{
 #' paloma <- ltc("paloma")
 #' pltc(paloma)
+#'}
+#' @importFrom ggplot2 ggplot aes geom_tile theme_void labs theme element_text geom_text
+#' @importFrom dplyr filter %>%
+#' @export
+pltc <- function(chromata, ...) {
 
-pltc <- function(chromata,...) {
-
+  # Assuming info is available in the global environment or it's part of your package data.
   info2 = info %>%
-    filter(palette_name==attributes(chromata)$name)
+    filter(palette_name == attributes(chromata)$name)
 
   n <- length(chromata)
-  df <- data.frame(xvals = c(1:n), yvals = rep(1, n), text=chromata[1:n])
-  ggplot2::ggplot(df, aes(x = xvals, y = yvals)) +
-    ggplot2::geom_tile(fill = chromata,
+  df <- data.frame(xvals = c(1:n), yvals = rep(1, n), text = chromata[1:n])
+
+  ggplot(df, aes(x = xvals, y = yvals)) +
+    geom_tile(fill = chromata,
               colour = "white",
               size = 1) +
-    ggplot2::geom_text(aes(label=text), color="#333333", nudge_y = -0.53) +
-    ggplot2::theme_void() +
-    ggplot2::theme(plot.title = element_text(hjust = 0.5, face="italic"),
+    geom_text(aes(label=text), color="#333333", nudge_y = -0.53) +
+    theme_void() +
+    theme(plot.title = element_text(hjust = 0.5, face="italic"),
           plot.subtitle = element_text(hjust = 0.5, size=10),    # Subtitle customization
           legend.position = "none") +
-    ggplot2::labs(title = info2$palette_name, subtitle = info2$bio)
+    labs(title = info2$palette_name, subtitle = info2$bio)
 }
 
-#' Plot colour palette as sinus curve
-#' @description Plot chosen colour palette from ltc package as sinus curve
-#' @param chromata A vector of colours
-#' @return A sinus curve showing colours in palette
-#' @export
-#' @import ggplot2 dplyr
+#' @title Plot a Colour Palette as a Sinus Curve
+#' @description Visualizes a selected colour palette as a sinusoidal curve.
+#' @param ... Additional arguments passed on to ggplot functions.
+#' @param chromata A vector of colours from one of the `ltc` palettes.
+#' @return A sinusoidal curve with the selected colors.
 #' @examples
+#' \dontrun{
 #' paloma <- ltc("paloma")
 #' plts(paloma)
+#'}
+#' @export
 
 plts <- function(chromata, ...) {
     x <- outer(
@@ -143,15 +164,22 @@ plts <- function(chromata, ...) {
     graphics::matplot(x, type = "l", lwd = 4, lty = 1, col = chromata, ...)
 }
 
-#' Plot colour palette as a bird
-#' @description The color for the bird were chosen from the ltc color palette
-#' @param chrom A vector of colours
-#' @return A bird plot
-#' @export
-#' @import ggplot2 dplyr ggforce
+#' @title Plot a Colour Palette as a Bird
+#' @description Visualizes a selected colour palette in the form of a bird drawing.
+#'
+#' @param chrom A vector of colours from one of the `ltc` palettes.
+#' @return A ggplot2 object showing a bird drawing using the selected colours.
 #' @examples
+#' \dontrun{
 #' paloma <- ltc("paloma")
 #' bird(paloma)
+#'}
+#' @importFrom ggplot2 ggplot theme_void labs theme
+#' @importFrom ggforce geom_shape
+#' @importFrom dplyr filter
+#' @importFrom dplyr %>%
+#' @importFrom ggplot2 element_text
+#' @export
 
 bird <- function(chrom){
   data=data.frame(x1=0,x2=5,y1=-5,y2=5, x3=4.5,x4=5.5,y3=0,y4=12)
@@ -170,7 +198,7 @@ shape3 <- data.frame(
   )
 shape4 <- data.frame(
     x4=c(1.99,2.5, 3.01,3.01,2,2),
-    y4=c(5,   6.5,  5,   2, -0.01,1)
+    y4=c(5, 6.5,5,  2, -0.01,1)
   )
 
 info2 = info %>%

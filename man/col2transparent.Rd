@@ -7,14 +7,12 @@
 col2transparent(col, alpha.perc = 0)
 }
 \arguments{
-\item{col}{R color name or R color pal \link{mandatory}}
+\item{col}{R color name or R color pal. This parameter is mandatory.}
 
-\item{alpha.perc}{an alpha-transparency level in percent \link{default: 0}}
+\item{alpha.perc}{An alpha-transparency level in percent. Default value is 0.}
 }
 \value{
-A character vector with elements of 9 characters,
-"#" followed by the red, blue, green and alpha values in hexadecimal
-(after rescaling to 0 ... 255).
+A character vector with elements of 9 characters, followed by the red, blue, green and alpha values in hexadecimal (after rescaling to 0 ... 255).
 }
 \description{
 R color to transparent conversion.
