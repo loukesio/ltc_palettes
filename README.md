@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ## Install package
-Install the package using the following commands  <img align="right" src="ReadMEFigures/new_logo_ltc.png" width=600>
+Install the package using the following commands  <img align="right" src="ReadMEFigures/new_logo_ltc.png" width=450>
 
 ```r
 # for now, you can install the developmental version of ltc
