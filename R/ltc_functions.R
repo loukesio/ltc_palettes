@@ -27,7 +27,15 @@ palettes <- list(
     OkabeIto=c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#999999"),
     kiss=c("#FF7C7E","#FEC300","#9E3F71","#31BCBA","#E20035"),
     hat=c('#efb306','#eb990c','#e8351e','#cd023d','#852f88','#4e54ac','#0f8096','#7db954','#17a769','#000000'),
-    reading=c("#EFBC68","#919F89","#EDBDAE","#57717C","#5F97A4","#CAEAC8","#95A1AE","#C8CFD6")
+    reading=c("#EFBC68","#919F89","#EDBDAE","#57717C","#5F97A4","#CAEAC8","#95A1AE","#C8CFD6"),
+    ten_colors=c('#efb306','#eb990c','#e8351e','#cd023d','#852f88', '#4e54ac','#0f8096', '#7db954','#17a769','#000000'),
+    alger=c("#000000","#1A5B5B","#ACC8BE","#F4AB5C","#D1422F"),
+    trio1=c("#0E7175","#FD7901","#C35BCA"),
+    trio2=c("#89973D","#E8B92F","#A45E41"),
+    trio3=c("#E69F00", "#56B4E9", "#009E73"),
+    trio4=c("#94475E","#364C54","#E5A11F"),
+    heatmap=c("#001219","#005F73","#0A9396","#94D2BD","#E9D8A6","#EE9B00","#CA6702","#AE2012","#9B2226"),
+    pantone23=c("#7A92A5","#1F2C43","#FFB000","#842c48","#46483d")
 )
 
 #' @title Select a Colour Palette from ltc
@@ -89,7 +97,15 @@ info <- data.frame(palette_name=c("paloma",
                                   "OkabeIto",
                                   "kiss",
                                   "hat",
-                                  "reading"),
+                                  "reading",
+                                  "ten_colors",
+                                  "alger",
+                                  "trio1",
+                                  "trio2",
+                                  "trio3",
+                                  "trio4",
+                                  "heatmap",
+                                  "pantone23"),
                    bio=c("Daughter of Francoise Gillot and Pablo Picasoo",
                          c("Daughter of  Marie-Therese Walte and Pablo Ruiz Picasso"),
                          c("French photographer, painter, and poet"),
@@ -107,8 +123,16 @@ info <- data.frame(palette_name=c("paloma",
                          c("All credits go to Claus Wilke"),
                          c("Inspired by The Kiss Picasso 1925"),
                          c("Inspired by Woman in hat Picasso 1937"),
-                         c("Inspired by Two Girls Reading Picasso 1934")
-                   ))
+                         c("Inspired by Two Girls Reading Picasso 1934"),
+                         c("The Ten different colors offers variety without overwhelming the design"),
+                         c("Inspired by Les femmes d Alger Picasso 1955"),
+                         c("A discrete color palette to visualise 3 variables"),
+                         c("A discrete color palette to visualise 3 variables"),
+                         c("A discrete color palette to visualise 3 variables"),
+                         c("A discrete color palette to visualise 3 variables"),
+                         c("A diverging color palette suitable for heatmaps"),
+                         c("Soft Chaos realease by Pantone in Summer 23 ")
+                      ))
 
 #' @title Plot a Colour Palette
 #' @description Visualizes a selected colour palette as a bar of colours.
