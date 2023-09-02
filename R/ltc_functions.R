@@ -131,7 +131,7 @@ info <- data.frame(palette_name=c("paloma",
                          c("A discrete color palette to visualise 3 variables"),
                          c("A discrete color palette to visualise 3 variables"),
                          c("A diverging color palette suitable for heatmaps"),
-                         c("Soft Chaos realease by Pantone in Summer 23 ")
+                         c("Soft Chaos was realeased by Pantone in Summer 23 ")
                       ))
 
 #' @title Plot a Colour Palette
