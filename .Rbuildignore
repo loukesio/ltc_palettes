@@ -2,3 +2,4 @@
 ^\.Rproj\.user$
 ^ReadMEFigures
 ^LICENSE\.md$
+^Dockerfile$
