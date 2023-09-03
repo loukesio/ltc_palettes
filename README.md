@@ -34,51 +34,92 @@ names(palettes)
 ```
 <sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
 
-### See the hex codes of the palette you like
-``` r
-palettes$alger
-#> [1] "#000000" "#1A5B5B" "#ACC8BE" "#F4AB5C" "#D1422F"
-```
-<sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
-
-### Choose the palette you like 
+### Choose the palette you like and print it
+- choose it using the `ltc` command.
 ``` r
 alger <- ltc("alger") #in this case you select alger
 ```
-<sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
-### Print the palette you have choosen
+- after choosing the palette print it using the `pltc` command!
 ``` r
 pltc(alger)
 ```
 <img src="ReadMEFigures/alger.png" width=450>
-<sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>   <br>
 
-```r
+- you can also print the palette you have chosen in a bird-shape, in here we are using `dora`
+
+``` r
+library(ltc)
+pantone23 <- ltc("pantone23")
+bird(pantone23)
+```
+<img src="ReadMEFigures/pantone_bird_ltc.png" width=450>
+
+<sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
+
+### Test how the palette looks like in plots...
+
+- Example 1 - Hexagon diagram
+
+``` r
+library(ggplot2)
+library(ltc)
+pal=ltc("heatmap",10,"continuous")
+
 ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
   geom_hex() +
   coord_fixed() +
   scale_fill_gradientn(colours = pal) +
   theme_void()
 ```
+<img src="ReadMEFigures/hexagon_plot_ltc.png" width=450>
+
 <sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
+
+
+- Example 2 - Histogram
 
 ``` r
 library(ltc)
 library(ggplot2)
-alger <- ltc("alger")
 pal=ltc("alger",5,"continuous")
 
 ggplot(diamonds, aes(price, fill = cut)) +
-geom_histogram(binwidth = 500, position = "fill") +
-scale_fill_manual(values = pal) +
-theme_bw() +
-theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+  geom_histogram(binwidth = 500, position = "fill") +
+  scale_fill_manual(values = pal) +
+  theme_bw() +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+```
+<img src="ReadMEFigures/histogram_plot_ltc.png" width=450>
+
+<sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
+
+- Example 3 - Line plot
+``` r
+library(ltc)
+pal=ltc("maya",7,"continuous")
+plts(pal, main = "maya")
+```
+<img src="ReadMEFigures/line_plot_ltc.png" width=450>
+
+<sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
+
+- Example 4 - Transparency blend
+
+``` r
+library(ltc)
+pal=ltc("mterese",500,"continuous")
+plts(col2transparent(pal, 75))
+plts(pal, main = "mterese")
 ```
 
-![](https://i.imgur.com/z0IByKU.png)<!-- -->
+<img src="ReadMEFigures/transparency_blend_ltc.png" width=450>
 
 <sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
 
 
 ## Contributions
-Loukas Theodosiou (theoodosiou@evolbio.mpg.de) and Kristian Ullrich (ullrich@evolbio.mpg.de) have contributed to the development of this package. We have drawn inspiration from the following packages 1. https://github.com/jakelawlor/PNWColors and 2. https://github.com/karthik/wesanderson. A huge thank you to the developers of these beautiful packages.
+Loukas Theodosiou (theoodosiou@evolbio.mpg.de) and Kristian Ullrich (ullrich@evolbio.mpg.de) have contributed to the development of this package. We have drawn inspiration from the drawings and life of Pablo Picasso as well as from the following books 
+<p float="left">
+  <img src="ReadMEFigures/book1.jpeg" width="100" />
+  <img src="ReadMEFigures/book2.jpeg" width="100" />
+</p> 
