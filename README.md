@@ -21,187 +21,40 @@ library(ltc)
 
 <img src="ReadMEFigures/all_colors_ltc.png" width=1000>
 
+## How can I use the `ltc` package?
 
-
-
-## All palettes
-
-```r
-# see the available palettes
- names(palettes)
- [1] "paloma"     "maya"       "dora"       "ploen"      "olga"       "mterese"    "gaby"       "franscoise"
- [9] "fernande"   "sylvie"     "crbhits"    "expevo"     "minou"         
-
-# see the hex code from each palette 
-palettes$paloma
-[1] "#83AF9B" "#C8C8A9" "#f8da8a" "#f7bf95" "#fe8ca1"
+### Show all palettes
+``` r
+names(palettes)
+#>  [1] "paloma"     "maya"       "dora"       "ploen"      "olga"      
+#>  [6] "mterese"    "gaby"       "franscoise" "fernande"   "sylvie"    
+#> [11] "crbhits"    "expevo"     "minou"      "kiss"       "hat"       
+#> [16] "reading"    "ten_colors" "alger"      "trio1"      "trio2"     
+#> [21] "trio3"      "trio4"      "heatmap"    "pantone23"
 ```
- **pastel palettes:** _paloma, olga, mterese_
- <img src="ReadMEFigures/paloma.png">
- #
+<sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
 
- **diverging palettes:** _paloma, maya, dora, ploen, olga, mterese, gaby_ 
-<img src="ReadMEFigures/dora.png">
- #
-
- **Sequential: Multi-hue palettes:** _franscoise, crbhits_
-<img src="ReadMEFigures/franscoise.png">
- #
- **Categorical palettes:** _fernande, sylvie, expevo, minou_ 
-<img src="ReadMEFigures/minou.png">
-
-## Examples
-### paloma
-```r
-# select the palette
-paloma <- ltc("paloma")
-
-#and print it with 
-pltc(paloma)
+### See the hex codes of the palette you like
+``` r
+palettes$alger
+#> [1] "#000000" "#1A5B5B" "#ACC8BE" "#F4AB5C" "#D1422F"
 ```
-<img src="ReadMEFigures/paloma.png">
+<sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
 
-```r
-# hex plot
-pal=ltc("paloma",100,"continuous")
-ggplot2::ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
-  ggplot2::geom_hex() +
-  ggplot2::coord_fixed() +
-  ggplot2::scale_fill_gradientn(colours = pal) +
-  ggplot2::theme_minimal()
+### Choose the palette you like 
+``` r
+alger <- ltc("alger") #in this case you select alger
 ```
-<img src="ReadMEFigures/paloma_hex.png">
-
-```r
-# stakc plot
-ggplot2::ggplot(diamonds, aes(price, fill = cut)) +
-  ggplot2::geom_histogram(binwidth = 500, position = "fill") +
-  ggplot2::scale_fill_manual(values = pal) +
-  ggplot2::theme_bw() +
-  ggplot2::theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
-```
-<img src="ReadMEFigures/paloma_stack.png">
-
-###
-### maya
-
-```
-# select the palette
-maya <- ltc("maya")
-
-#and print it with 
-pltc(maya)
-```
-<img src="ReadMEFigures/maya.png">
-
-```r
-pal=ltc("maya",100,"continuous")
-ggplot2::ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
-  ggplot2::geom_hex() +
-  ggplot2::coord_fixed() +
-  ggplot2::scale_fill_gradientn(colours = pal) +
-  ggplot2::theme_minimal()
-```
-<img src="ReadMEFigures/maya_hex.png">
-
-```r
-pal=ltc("maya",7,"continuous")
-ggplot2::gplot(diamonds, aes(price, fill = color)) +
-  ggplot2::geom_histogram(binwidth = 500, position = "fill") +
-  ggplot2::scale_fill_manual(values = pal) +
-  ggplot2::theme_bw() +
-  ggplot2::theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
-```
-  
-<img src="ReadMEFigures/maya_stack.png">
-
-```r
-pal=ltc("maya",7,"continuous")
-plts(pal, main = "maya")
-```
-  
-<img src="ReadMEFigures/maya_sinus.png">
-
-```r
-pal=ltc("mterese",500,"continuous")
-plts(col2transparent(pal, 75))
+<sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
+### Print the palette you have choosen
+``` r
+pltc(alger)
 ```
 
-<img src="ReadMEFigures/mterese_sinus_transparent.png">
+![](https://i.imgur.com/89dt3IF.png)<!-- -->
 
-### dora
+<sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
 
-```
-# select the palette
-dora <- ltc("dora")
-
-#and print it with 
-pltc(dora)
-```
-<img src="ReadMEFigures/dora.png">
-
-```r
-library(ggplot2)
-pal=ltc("dora",100,"continuous")
-ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
-  geom_hex() +
-  coord_fixed() +
-  scale_fill_gradientn(colours = pal) +
-  theme_minimal()
- ```
-
-<img src="ReadMEFigures/dora_hex.png">
-
-
-```r
-pal=ltc("dora",7,"continuous")
-ggplot(diamonds, aes(price, fill = color)) +
-geom_histogram(binwidth = 500, position = "fill") +
-scale_fill_manual(values = pal) +
-theme_bw() +
-theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
-```
-<img src="ReadMEFigures/dora_stack.png">
-
-```r
-# plot the logo
-dora <- ltc("dora")
-bird(dora)
-```
-<img src="ReadMEFigures/dora_bird.png" width=400 height=425>
-
-
-### ploen
-```
-# select the palette
-ploen <- ltc("ploen")
-
-#and print it with 
-pltc(ploen)
-```
-<img src="ReadMEFigures/ploen.png">
-
-```r
-library(ggplot2)
-pal=ltc("ploen",100,"continuous")
-ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
-  geom_hex() +
-  coord_fixed() +
-  scale_fill_gradientn(colours = pal) +
-  theme_minimal()
- ```
-
-<img src="ReadMEFigures/ploen_hex.png">
-
-```r
-pal=ltc("ploen",7,"continuous")
-ggplot(diamonds, aes(price, fill = color)) +
-geom_histogram(binwidth = 500, position = "fill") +
-scale_fill_manual(values = pal) +
-theme_bw() +
-theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
-```
-<img src="ReadMEFigures/ploen_stack.png">
 
 ## Contributions
 Loukas Theodosiou (theoodosiou@evolbio.mpg.de) and Kristian Ullrich (ullrich@evolbio.mpg.de) have contributed to the development of this package. We have drawn inspiration from the following packages 1. https://github.com/jakelawlor/PNWColors and 2. https://github.com/karthik/wesanderson. A huge thank you to the developers of these beautiful packages.
