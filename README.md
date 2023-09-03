@@ -19,6 +19,11 @@ install_github("loukesio/ltc_palettes")
 library(ltc)
 ```
 
+<img src="ReadMEFigures/all_colors_ltc.png" width=1000>
+
+
+
+
 ## All palettes
 
 ```r
