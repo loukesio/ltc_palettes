@@ -50,8 +50,32 @@ alger <- ltc("alger") #in this case you select alger
 ``` r
 pltc(alger)
 ```
+<img src="ReadMEFigures/alger.png" width=450>
+<sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>   <br>
 
-![](https://i.imgur.com/89dt3IF.png)<!-- -->
+```r
+ggplot(data.frame(x = rnorm(1e4), y = rnorm(1e4)), aes(x = x, y = y)) +
+  geom_hex() +
+  coord_fixed() +
+  scale_fill_gradientn(colours = pal) +
+  theme_void()
+```
+<sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
+
+``` r
+library(ltc)
+library(ggplot2)
+alger <- ltc("alger")
+pal=ltc("alger",5,"continuous")
+
+ggplot(diamonds, aes(price, fill = cut)) +
+geom_histogram(binwidth = 500, position = "fill") +
+scale_fill_manual(values = pal) +
+theme_bw() +
+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+```
+
+![](https://i.imgur.com/z0IByKU.png)<!-- -->
 
 <sup>Created on 2023-09-03 with [reprex v2.0.2](https://reprex.tidyverse.org)</sup>
 
